@@ -1,0 +1,38 @@
+@use "../variables.scss" as *;
+
+.drink-order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 60px;
+}
+
+.drink-order__price-last {
+  margin-right: 6px;
+  font-size: 16px;
+  line-height: 32px;
+  text-decoration-line: line-through;
+  color: $textСolor-secondary;
+}
+
+.drink-order__price-now {
+  margin-right: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.drink-order__span {
+  display: inline-block;
+  padding: 8px 20px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+@media (min-width: $desktop-width) {
+  .drink-order {
+    display: flex;
+    justify-content: stretch;
+  }
+}

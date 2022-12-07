@@ -1,0 +1,147 @@
+@use "../variables.scss" as *;
+
+.advantage {
+  background-color: #ffffff;
+  margin: 0 auto;
+  padding-bottom: 60px;
+  padding-top: 50px;
+}
+
+.advantage__badge {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-transform: uppercase;
+  color: $textСolor-secondary;
+}
+
+.advantage__title {
+  margin: 0;
+  margin-bottom: 36px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+}
+
+.advantage__list {
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.advantage__item {
+  margin-bottom: 32px;
+  text-align: center;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.advantage__icon {
+  margin-bottom: 5px;
+}
+
+.advantage__item-title {
+  margin: 0;
+  margin-bottom: 4px;
+  font-size: 18px;
+  font-weight: 700px;
+  line-height: 32px;
+}
+
+.advantage__item-description {
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .advantage {
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+
+  .advantage__title {
+    margin-bottom: 60px;
+    font-size: 42px;
+    line-height: 64px;
+  }
+
+  .advantage__list {
+    display: grid;
+    grid-template-columns: 339px 339px;
+    justify-content: center;
+    row-gap: 50px;
+    column-gap: 30px;
+  }
+
+  .advantage__item {
+    display: flex;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .advantage__icon {
+    flex-shrink: 0;
+
+    &--speed {
+      margin-right: 21px;
+    }
+
+    &--comfort {
+      margin-right: 20px;
+    }
+
+    &--energy {
+      margin-right: 29px;
+    }
+
+    &--ecology {
+      margin-right: 26px;
+    }
+  }
+
+  .advantage__item-title {
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .advantage__item-description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantage {
+    padding-bottom: 120px;
+    padding-top: 100px;
+  }
+
+  .advantage__title {
+    margin-bottom: 80px;
+  }
+
+  .advantage__list {
+    grid-template-columns: 318px 318px 318px 318px;
+  }
+
+  .advantage__item {
+    display: block;
+    text-align: center;
+  }
+
+  .advantage__icon {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+
+  .advantage__item-title {
+    margin-bottom: 10px;
+  }
+}

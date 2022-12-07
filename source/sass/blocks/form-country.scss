@@ -1,0 +1,106 @@
+@use "../variables.scss" as *;
+
+.form-country {
+  margin-bottom: 35px;
+}
+
+.form-country__list {
+  width: 150px;
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.form-country__item {
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form-country__input[type="checkbox"] {
+  display: none;
+}
+
+.form-country__name {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 42px;
+    height: 24px;
+    display: block;
+    background: #bdbdbd;
+    border-radius: 12px;
+    transition: background-color 0.2s ease;
+  }
+}
+
+.form-country__mark {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: #ffffff;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.form-country__input:checked + .form-country__name::before {
+  background: $textСolor-secondary;
+}
+
+.form-country__input:checked:hover + .form-country__name::before {
+  background: $textСolor-secondary;
+}
+
+.form-country__input + .form-country__name:hover::before {
+  background: #d8d0ee;
+  border: 2px solid $textСolor-secondary;
+}
+
+.form-country__input:disabled + .form-country__name:hover {
+  cursor: default;
+}
+
+.form-country__input:disabled + .form-country__name .form-country__mark-control {
+  color: #e2e2e2;
+}
+
+.form-country__input:disabled:hover + .form-country__name::before {
+  background: #e2e2e2;
+}
+
+.form-country__input:disabled + .form-country__name:hover::before {
+  border: 0;
+}
+
+.form-country__input:disabled + .form-country__name::before {
+  background: #e2e2e2;
+}
+
+.form-country__input:checked + .form-country__name .form-country__mark {
+  transform: translateX(18px);
+  transition: all 0.2s cubic-bezier(0.8, 0.4, 0.3, 1.25), background-color 0.15s ease;
+  box-shadow: 0 3px 8px rgba(79, 46, 220, 0.2);
+}
+
+.form-country__mark-control {
+  padding-left: 10px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media (min-width: $tablet-width) {
+  .form-country {
+    margin-bottom: 40px;
+  }
+}

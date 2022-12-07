@@ -1,0 +1,76 @@
+@use "../variables.scss" as *;
+
+.form-filter {
+  display: grid;
+  justify-content: center;
+}
+
+.form-filter__button {
+  margin-bottom: 24px;
+  padding: 11px 15px;
+  font-family: $fontFamily;
+  font-size: 13px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.form-filter__reset {
+  padding: 11px 15px;
+  font-family: $fontFamily;
+  font-size: 14px;
+  line-height: 24px;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  color: $textСolor-secondary;
+  background-color: #ffffff;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: #9070ec;
+  }
+
+  &:active {
+    color: #ffffff;
+    background-color: #593cac;
+  }
+
+  &:disabled {
+    color: #ffffff;
+    background-color: #e2e2e2;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .form-filter {
+    display: flex;
+    padding-right: 52px;
+  }
+
+  .form-filter__button {
+    margin-bottom: 0;
+    margin-right: 30px;
+    padding: 9px 4px;
+    font-size: 14px;
+  }
+
+  .form-filter__reset {
+    padding: 9px 6px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form-filter {
+    padding-right: 0;
+  }
+
+  .form-filter__button {
+    margin-right: 17px;
+    padding: 8px 5px;
+  }
+
+  .form-filter__reset {
+    padding: 8px 12px;
+  }
+}

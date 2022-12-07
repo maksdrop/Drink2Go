@@ -1,0 +1,75 @@
+@use "../variables.scss" as *;
+
+.form {
+  margin: 0 auto;
+}
+
+.form__fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.form__subtitle {
+  margin-bottom: 22px;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+
+  &--price {
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .form {
+    display: grid;
+    grid-template-columns: 247px 247px 232px;
+    grid-template-rows: 1fr 40px;
+    grid-template-areas:
+      "range milk country"
+      "filter filter filter";
+  }
+
+  .form__range-grid {
+    grid-area: range;
+  }
+
+  .form__milk-grid {
+    grid-area: milk;
+  }
+
+  .form__country-grid {
+    grid-area: country;
+  }
+
+  .form__filter-grid {
+    grid-area: filter;
+  }
+
+  .form__subtitle {
+    margin-bottom: 20px;
+
+    &--price {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form {
+    grid-template-columns: 318px;
+    grid-template-rows: none;
+    grid-template-areas:
+      "range"
+      "milk"
+      "country"
+      "filter";
+    padding-top: 0;
+  }
+
+  .form__subtitle--price {
+    margin-bottom: 31px;
+  }
+}

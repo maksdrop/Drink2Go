@@ -1,0 +1,28 @@
+@use "../variables.scss" as *;
+
+.catalog-title__badge {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-transform: uppercase;
+  color: $textСolor-secondary;
+}
+
+.catalog-title__heading {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog-title__heading {
+    font-size: 42px;
+    line-height: 64px;
+  }
+}

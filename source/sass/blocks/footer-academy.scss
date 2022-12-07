@@ -1,0 +1,61 @@
+@use "../variables.scss" as *;
+
+.footer-academy {
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.footer-academy__container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0 auto;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #bdbdbd;
+}
+
+.footer-academy__link {
+  display: flex;
+  margin-left: 3px;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #bdbdbd;
+
+  &:hover,
+  &:focus {
+    color: $textСolor-secondary;
+  }
+
+  &:active {
+    color: #593cac;
+  }
+}
+
+.footer-academy__link:hover .footer-academy__icon,
+.footer-academy__link:focus .footer-academy__icon {
+  fill: $textСolor-secondary;
+}
+
+.footer-academy__link:active .footer-academy__icon {
+  fill: #593cac;
+}
+
+.footer-academy__icon {
+  margin-left: 4px;
+  fill: #bdbdbd;
+}
+
+@media (min-width: $tablet-width) {
+  .footer-academy {
+    padding-top: 37px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footer-academy {
+    padding-top: 27px;
+  }
+}

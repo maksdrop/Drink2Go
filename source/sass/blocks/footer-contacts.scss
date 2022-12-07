@@ -1,0 +1,59 @@
+@use "../variables.scss" as *;
+
+.footer-contacts {
+  padding: 20px 0;
+  border-bottom: 1px solid #f0ebff;
+}
+
+.footer-contacts__container {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-contacts__title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: $textСolor-secondary;
+}
+
+.footer-contacts__address {
+  position: relative;
+  padding-left: 19px;
+  padding-bottom: 16px;
+  font-style: normal;
+
+  &::before {
+    content: url("../../img/footer/address.svg");
+    position: absolute;
+    left: 0;
+    top: 2px;
+  }
+}
+
+.footer-contacts__phone {
+  position: relative;
+  padding-left: 19px;
+
+  &::before {
+    content: url("../../img/footer/phone.svg");
+    position: absolute;
+    left: 0;
+    top: 1px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .footer-contacts {
+    padding: 0;
+    border-bottom: 0;
+  }
+
+  .footer-contacts__container {
+    padding: 0;
+    width: 100%;
+  }
+}

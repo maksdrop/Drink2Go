@@ -1,0 +1,43 @@
+@use "../variables.scss" as *;
+
+.cards {
+  padding-top: 16px;
+}
+
+.cards__container {
+  margin: 0 auto;
+}
+
+.cards__list {
+  display: grid;
+  grid-template-columns: 280px;
+  row-gap: 20px;
+  justify-content: center;
+  margin: 0;
+  margin-bottom: 40px;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+@media (min-width: $tablet-width) {
+  .cards {
+    padding-top: 26px;
+  }
+
+  .cards__list {
+    grid-template-columns: 349px 349px;
+    gap: 30px;
+    margin-bottom: 70px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .cards {
+    padding-top: 25px;
+  }
+
+  .cards__list {
+    grid-template-columns: 317px 317px 317px;
+    margin-bottom: 61px;
+  }
+}

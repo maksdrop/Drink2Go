@@ -1,0 +1,144 @@
+@use "../variables.scss" as *;
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.pagination__number {
+  display: flex;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.pagination__desktop {
+  display: none;
+}
+
+.pagination__switch {
+  padding: 6px 15px;
+  border: 0;
+  border-radius: 4px;
+  background-color: #ffffff;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: #9070ec;
+  }
+
+  &:active {
+    background-color: #593cac;
+  }
+
+  &:disabled {
+    background-color: #e2e2e2;
+  }
+}
+
+.pagination__icon {
+  fill: $textСolor-secondary;
+}
+
+.pagination__switch:hover .pagination__icon,
+.pagination__switch:focus .pagination__icon,
+.pagination__switch:active .pagination__icon,
+.pagination__switch:disabled .pagination__icon {
+  fill: #ffffff;
+}
+
+.pagination__item {
+  display: flex;
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.pagination__item-number {
+  margin-right: 20px;
+}
+
+.pagination__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  line-height: 24px;
+  color: $textСolor-secondary;
+  background-color: #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: #9070ec;
+  }
+
+  &:active {
+    color: #ffffff;
+    background-color: #593cac;
+  }
+
+  &:disabled {
+    color: #ffffff;
+    background-color: #e2e2e2;
+  }
+}
+
+.pagination__link--active {
+  color: $textСolor-main;
+  cursor: default;
+
+  &:hover,
+  &:focus {
+    color: $textСolor-main;
+    background-color: #ffffff;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .pagination {
+    width: 759px;
+    justify-content: end;
+    margin: 0 auto;
+    padding-right: 16px;
+  }
+
+  .pagination__icon {
+    display: none;
+  }
+
+  .pagination__switch {
+    padding: 6px 24px;
+  }
+
+  .pagination__desktop {
+    display: block;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: $textСolor-secondary;
+  }
+
+  .pagination__switch:hover .pagination__desktop,
+  .pagination__switch:focus .pagination__desktop,
+  .pagination__switch:active .pagination__desktop,
+  .pagination__switch:disabled .pagination__desktop {
+    color: #ffffff;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .pagination {
+    width: 100%;
+    padding-right: 0;
+  }
+}

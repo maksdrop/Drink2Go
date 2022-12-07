@@ -1,0 +1,46 @@
+@use "../variables.scss" as *;
+
+.slider-steps {
+  display: none;
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+@media (min-width: $desktop-width) {
+  .slider-steps {
+    position: absolute;
+    z-index: 3;
+    left: 43%;
+    top: 90%;
+    text-align: center;
+    display: flex;
+  }
+
+  .slider-steps__button {
+    margin-right: 8px;
+    width: 62px;
+    height: 4px;
+    background-color: #ffffff;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: #d8d0ee;
+    }
+
+    &:active {
+      background-color: $textСolor-secondary;
+    }
+
+    &--active {
+      background-color: $textСolor-secondary;
+      cursor: default;
+
+      &:hover,
+      &:focus {
+        background-color: $textСolor-secondary;
+      }
+    }
+  }
+}

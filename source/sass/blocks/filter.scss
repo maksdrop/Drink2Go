@@ -1,0 +1,20 @@
+@use "../variables.scss" as *;
+
+.filter {
+  display: grid;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+@media (min-width: $desktop-width) {
+  .filter {
+    position: relative;
+    bottom: 30px;
+    justify-content: normal;
+    padding-top: 0;
+  }
+
+  .filter-wrapper {
+    margin-right: 30px;
+  }
+}

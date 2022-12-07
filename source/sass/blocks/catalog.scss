@@ -1,0 +1,44 @@
+@use "../variables.scss" as *;
+
+.catalog {
+  padding-top: 48px;
+  padding-bottom: 44px;
+  background-color: #f8f8f8;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog {
+    padding-top: 80px;
+    padding-bottom: 90px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog {
+    display: grid;
+    grid-template-columns: 348px 1011px;
+    grid-template-areas:
+      "title title"
+      "sorting sorting"
+      "filter cards";
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
+
+  .catalog__title-grid {
+    grid-area: title;
+  }
+
+  .catalog__filter-grid {
+    grid-area: filter;
+  }
+
+  .catalog__sorting-grid {
+    grid-area: sorting;
+  }
+
+  .catalog__cards-grid {
+    grid-area: cards;
+  }
+}

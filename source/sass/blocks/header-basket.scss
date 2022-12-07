@@ -1,0 +1,55 @@
+@use "../variables.scss" as *;
+
+.header-basket__link {
+  position: relative;
+  display: inline-block;
+  padding: 30px;
+
+  &:active {
+    background-color: #f0ebff;
+  }
+}
+
+.header-basket__icon {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  fill: $textСolor-main;
+}
+
+.header-basket__link:hover .header-basket__icon,
+.header-basket__link:focus .header-basket__icon,
+.header-basket__link:hover .header-basket__span,
+.header-basket__link:focus .header-basket__span {
+  fill: $textСolor-secondary;
+  color: $textСolor-secondary;
+}
+
+.header-basket__span {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .header-basket__link {
+    display: flex;
+    padding: 40px 30px;
+  }
+
+  .header-basket__icon {
+    top: 32px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header-basket__link {
+    padding: 32px 20px 32px 44px;
+  }
+
+  .header-basket__span {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,65 @@
+@use "../variables.scss" as *;
+
+.footer-media {
+  padding-top: 20px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid #f0ebff;
+}
+
+.footer-media__container {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-media__title {
+  margin: 0;
+  margin-bottom: 17px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: $textСolor-secondary;
+}
+
+.footer-media__list {
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+  letter-spacing: 0.02em;
+}
+
+.footer-media__item {
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.footer-media__link {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    color: #9070ec;
+  }
+
+  &:active {
+    color: #593cac;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .footer-media {
+    padding: 0;
+    border-bottom: 0;
+  }
+
+  .footer-media__container {
+    width: 100%;
+    padding: 0;
+  }
+}

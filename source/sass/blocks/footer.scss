@@ -1,0 +1,61 @@
+@use "../variables.scss" as *;
+
+.footer {
+  padding-top: 22px;
+  padding-bottom: 30px;
+  background-color: #ffffff;
+}
+
+.footer__container {
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .footer {
+    padding-top: 42px;
+  }
+
+  .footer__container {
+    display: grid;
+    grid-template-columns: 223px 222px 223px;
+    grid-template-areas:
+      "social social social"
+      "shop media contacts"
+      "academy academy academy";
+    justify-content: center;
+    column-gap: 30px;
+  }
+
+  .footer__social {
+    grid-area: social;
+  }
+
+  .footer__shop {
+    grid-area: shop;
+  }
+
+  .footer__media {
+    grid-area: media;
+  }
+
+  .footer__contacts {
+    grid-area: contacts;
+  }
+
+  .footer__academy {
+    grid-area: academy;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footer {
+    padding-top: 48px;
+  }
+
+  .footer__container {
+    grid-template-columns: 318px 317px 318px 317px;
+    grid-template-areas:
+      "social shop media contacts"
+      "academy academy academy academy";
+  }
+}

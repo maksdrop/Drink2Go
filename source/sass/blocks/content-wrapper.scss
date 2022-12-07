@@ -1,0 +1,16 @@
+@use "../variables.scss" as *;
+
+.content-wrapper {
+  min-width: 320px;
+  max-width: 1440px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: $desktop-width) {
+  .content-wrapper {
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}

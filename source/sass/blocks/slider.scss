@@ -1,0 +1,107 @@
+@use "../variables.scss" as *;
+
+.slider {
+  display: grid;
+  grid-template-columns: 1fr minmax(280px, 608px) 1fr;
+  background-color: #f3ebe1;
+}
+
+.slider__wrapper {
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.slider__container {
+  display: none;
+}
+
+.slider__active {
+  display: block;
+}
+
+.slider__img {
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.slider__arrow {
+  padding: 0 4.5px;
+  border: none;
+  background-color: transparent;
+}
+
+.slider__arrow:disabled .slider__arrow-icon {
+  fill: bdbdbd;
+}
+
+.slider__arrow-icon {
+  fill: $textСolor-secondary;
+}
+
+.slider__arrow-back {
+  cursor: pointer;
+
+  &:hover {
+    background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:active {
+    background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+  }
+}
+
+.slider__arrow-forward {
+  cursor: pointer;
+
+  &:hover {
+    background: linear-gradient(270deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:active {
+    background: linear-gradient(270deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .slider {
+    grid-template-columns: minmax(80px, 1fr) minmax(599px, 1000px) minmax(80px, 1fr);
+    min-height: 640px;
+    margin-bottom: 188px;
+  }
+
+  .slider__wrapper {
+    display: grid;
+    padding-top: 60px;
+  }
+
+  .slider__img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 432px;
+    width: 476px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider {
+    position: relative;
+    grid-template-columns: minmax(80px, 1fr) 1260px minmax(80px, 1fr);
+    min-height: 714px;
+    margin-bottom: 0;
+  }
+
+  .slider__wrapper {
+    display: grid;
+    grid-template-columns: 630px 630px;
+    align-items: center;
+    padding-top: 30px;
+  }
+
+  .slider__img {
+    position: relative;
+    top: 0;
+    width: 600px;
+  }
+}

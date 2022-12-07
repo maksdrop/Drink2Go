@@ -1,0 +1,56 @@
+@use "../variables.scss" as *;
+
+.header-user__link {
+  position: relative;
+  display: inline-block;
+  padding: 30px;
+
+  &:active {
+    background-color: #f0ebff;
+  }
+}
+
+.header-user__icon {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  fill: $textСolor-main;
+}
+
+.header-user__link:hover .header-user__icon,
+.header-user__link:focus .header-user__icon,
+.header-user__link:hover .header-user__span,
+.header-user__link:focus .header-user__span {
+  fill: $textСolor-secondary;
+  color: $textСolor-secondary;
+}
+
+.header-user__span {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .header-user__link {
+    display: flex;
+    padding: 40px 30px;
+  }
+
+  .header-user__icon {
+    top: 32px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header-user__link {
+    display: flex;
+    padding: 32px 20px 32px 44px;
+  }
+
+  .header-user__span {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+}

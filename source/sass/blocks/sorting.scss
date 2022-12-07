@@ -1,0 +1,132 @@
+@use "../variables.scss" as *;
+
+.sorting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 36px;
+}
+
+.sorting__span {
+  margin-right: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.sorting__select {
+  position: relative;
+  left: 6px;
+}
+
+.sorting__button {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 32px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: $textСolor-secondary;
+  border-radius: 4px;
+}
+
+.sorting__default {
+  display: block;
+  padding-left: 10px;
+  padding-right: 30px;
+  text-align: right;
+  background-image: url("../../img/sorting/sorting-down.svg");
+  background-repeat: no-repeat;
+  background-position: top 10px right 11px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: #f0ebff;
+    border-radius: 4px;
+  }
+}
+
+.sorting__select.active .sorting__button i {
+  transform: rotate(-180deg);
+}
+
+.sorting__options {
+  position: relative;
+  z-index: 2;
+  display: none;
+  margin: 0;
+  margin-top: 10px;
+  padding-left: 0;
+  list-style-type: none;
+  background-color: #ffffff;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1), 0 5px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 4px 4px 0 0;
+}
+
+.sorting__select.active .sorting__options {
+  position: absolute;
+  right: 0;
+  display: block;
+  width: 190px;
+}
+
+.sorting__select.active .sorting__default {
+  background-image: url("../../img/sorting/sorting-up.svg");
+}
+
+.sorting__option {
+  display: flex;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  border-bottom: 1px solid #f0ebff;
+  cursor: pointer;
+
+  &--active {
+    border-radius: 4px 4px 0 0;
+    color: #ffffff;
+    background-color: $textСolor-secondary;
+  }
+
+  &:last-child {
+    border: 0;
+  }
+
+  &:hover:not(.sorting__option--active),
+  &:focus {
+    background-color: #f0ebff;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .sorting {
+    margin: 0 auto;
+    position: relative;
+    width: 759px;
+    justify-content: end;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .sorting {
+    width: 100%;
+    padding: 0;
+    padding-top: 36px;
+  }
+
+  .sorting__select {
+    left: 0;
+  }
+
+  .sorting__span {
+    margin-right: 11px;
+  }
+}

@@ -1,0 +1,200 @@
+@use "../variables.scss" as *;
+
+.form-range {
+  margin-bottom: 26px;
+}
+
+.form-range__container {
+  width: 280px;
+}
+
+.form-range__scale {
+  position: relative;
+  width: 241px;
+  height: 4px;
+  margin-bottom: 35px;
+  background-color: #9070ec;
+
+  &:disabled {
+    background-color: #bdbdbd;
+  }
+}
+
+.form-range-bar {
+  position: absolute;
+  right: -39px;
+  top: 1px;
+  width: 39px;
+  height: 2px;
+  background-color: #e2e2e2;
+}
+
+.form-range__toggle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #9070ec;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+
+  &--min {
+    bottom: -12px;
+    left: -241px;
+  }
+
+  &--max {
+    bottom: -12px;
+    left: -6px;
+  }
+
+  &:disabled {
+    background-color: #bdbdbd;
+  }
+}
+
+.form-range__toggle:hover::after,
+.form-range__toggle:focus::after {
+  content: "";
+  position: relative;
+  right: 4px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: #ddd5f3;
+  border-radius: 50%;
+}
+
+.form-range__toggle:active::after {
+  content: "";
+  position: relative;
+  right: 4px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: $textСolor-secondary;
+  border-radius: 50%;
+}
+
+.form-range__inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-range__input {
+  width: 118px;
+  height: 38px;
+  padding: 3px 0;
+  font-family: $fontFamily;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  border: 2px solid #9070ec;
+  outline: 0;
+  border-radius: 4px;
+
+  &:focus,
+  &:active {
+    border: 2px solid #593cac;
+
+    &::placeholder {
+      color: transparent;
+    }
+  }
+
+  &:disabled {
+    border-color: #e2e2e2;
+  }
+}
+
+.form-range__dash {
+  width: 9px;
+  height: 2px;
+  margin-top: 18px;
+  background-color: #bdbdbd;
+}
+
+@-moz-document url-prefix("") {
+  .form-range__toggle:hover::after,
+  .form-range__toggle:focus::after {
+    content: "";
+    right: 2px;
+  }
+
+  .form-range__toggle:active::after {
+    content: "";
+    right: 2px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .form-range {
+    margin-bottom: 32px;
+  }
+
+  .form-range__container {
+    width: 225px;
+    padding-left: 7px;
+  }
+
+  .form-range__scale {
+    width: 190px;
+    margin-bottom: 32px;
+  }
+
+  .form-range-bar {
+    right: -30px;
+    width: 30px;
+  }
+
+  .form-range__toggle {
+    position: absolute;
+
+    &--min {
+      left: -191px;
+    }
+
+    &--max {
+      left: -16px;
+    }
+  }
+
+  .form-range__input {
+    width: 92px;
+    height: 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form-range {
+    margin-bottom: 30px;
+  }
+
+  .form-range__container {
+    width: 318px;
+    padding-left: 0;
+  }
+
+  .form-range__scale {
+    margin-bottom: 32px;
+    width: 284px;
+  }
+
+  .form-range-bar {
+    right: -34px;
+    width: 34px;
+  }
+
+  .form-range__toggle--min {
+    left: -284px;
+  }
+
+  .form-range__toggle--max {
+    left: -12px;
+  }
+
+  .form-range__input {
+    width: 134px;
+  }
+}
